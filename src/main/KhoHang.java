@@ -73,7 +73,7 @@ public class KhoHang {
 		System.out.print("Bạn muốn sửa hàng theo Id hay loại hàng? 1) loại hàng	2) ID hàng ----> Lựa chọn: "); int cachsua = scanner.nextInt();
 		
 		if (cachsua == 1) {
-			System.out.println("Hãy nhập thông tin hàng bạn muốn sửa\n Loại hàng: 1) Điện máy	2) Sành Sứ	3) Thực Phẩm ----> Lựa chọn: "); int loaiHang = scanner.nextInt();
+			System.out.print("Hãy nhập thông tin hàng bạn muốn sửa\nLoại hàng: 1) Điện máy	2) Sành Sứ	3) Thực Phẩm ----> Lựa chọn: "); int loaiHang = scanner.nextInt();
 			if (loaiHang == 1) {
 				DienMay cur = headDienMay;
 				while (cur != null) {
@@ -105,6 +105,7 @@ public class KhoHang {
 					e.printStackTrace();
 				}
 				cur.ngayNhapKho = b;
+				cur.inTT();
 			}
 			
 			if (loaiHang == 2) {
@@ -138,6 +139,7 @@ public class KhoHang {
 					e.printStackTrace();
 				}
 				cur.ngayNhapKho = b;
+				cur.inTT();
 			}
 			
 			if (loaiHang == 3) {
@@ -171,6 +173,7 @@ public class KhoHang {
 					e.printStackTrace();
 				}
 				cur.ngayNhapKho = b;
+				cur.inTT();
 			}
 		}else if (cachsua == 2) {
 			System.out.print("Hãy nhập id hàng bạn cần sửa: "); int id = scanner.nextInt();
@@ -198,6 +201,7 @@ public class KhoHang {
 						e.printStackTrace();
 					}
 					curDM.ngayNhapKho = b;
+					curDM.inTT();
 					return;
 				}
 				curDM = curDM.next;
@@ -223,6 +227,7 @@ public class KhoHang {
 						e.printStackTrace();
 					}
 					curSS.ngayNhapKho = b;
+					curSS.inTT();
 					return;
 				}
 				curSS = curSS.next;
@@ -246,6 +251,7 @@ public class KhoHang {
 						e.printStackTrace();
 					}
 					curTP.ngayNhapKho = b;
+					curTP.inTT();
 					return;
 				}
 				curTP = curTP.next;
